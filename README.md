@@ -91,4 +91,4 @@ python app.py
 
 | Example 1 | Example 2 |
 |-----------|-----------|
-| ![Example 1](images/example1.png) | ![Example 2](images/example2.png) |
+| ![Example 1](images/ex1.png) | ![Example 2](images/ex2.png) |
