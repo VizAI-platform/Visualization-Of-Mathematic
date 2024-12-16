@@ -70,3 +70,25 @@ Our platform plans to integrate more advanced AI models and expand its visualiza
 ## Interaction and Cooperation
 
 To make this platform better, we encourage cooperation, criticism, and contributions. To examine the project, add to it, or offer recommendations, go to our GitHub repository.
+
+
+## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/your-repository.git
+
+# Navigate to the project directory
+cd your-repository
+
+# Install required dependencies
+pip install -r requirements.txt
+
+# Run the application
+python app.py
+```
+
+
+| Example 1 | Example 2 |
+|-----------|-----------|
+| ![Example 1](images/example1.png) | ![Example 2](images/example2.png) |
