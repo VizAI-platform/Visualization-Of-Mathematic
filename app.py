@@ -38,7 +38,10 @@ def trigonometryf(render):
             return render_template("caltrigonometry.html" , data=str(data))
         elif render == "vectors":
             print(data)
-            data = data.replace("%2b" , "+")
+            try:
+                data = data.replace("%2b" , "+")
+            except:
+                data = data
             return render_template("vectors.html" , data = data)
         else:
             return "not found"

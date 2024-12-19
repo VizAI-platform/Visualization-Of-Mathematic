@@ -43,29 +43,33 @@ action = sys.argv[2]
 def main(action ,num1  , num2):
 # رسم خط برای عدد اول
     if action == '+':
-        t.goto(num1 * 5, 20)
+        # تعیین جهت حرکت بر اساس مقدار عدد دوم
+        t.setheading(0 if num2 >= 0 else 180)
+
+        # رسم خط اول (آبی)
+        t.goto(0, 20)
         t.pendown()
         t.pensize(3)
         t.pencolor('blue')
-        t.goto(num1 * 5, 20)
+        t.goto(num1 * 5 , 20)  # خط اول با یک طول ثابت برای تست
         t.penup()
 
-        # رسم خط برای عدد دوم
-        t.goto(num1 * 5, 24)
+        # رسم خط دوم (نارنجی)
+        t.goto(num1 * 5, 25)
         t.pendown()
         t.pensize(3)
         t.pencolor('orange')
-
-        # تغییر جهت قلم بسته به مقدار ورودی دوم
-        if num2 < 0:
-            t.setheading(180)  # حرکت به سمت چپ
-        else:
-            t.setheading(0)    # حرکت به سمت راست
-
-        # رسم خط برای عدد دوم
-        t.goto((num1 + num2) * 5, 24)
+        t.goto((num1 * 5) + (num2 * 5) , 25)  # خط دوم با طول ثابت
         t.penup()
 
+        # محاسبه و رسم جمع دو عدد
+        result = num1 + num2
+        t.goto(0, 30)
+        t.pendown()
+        t.pensize(3)
+        t.pencolor('green')
+        t.goto(result * 5 , 30)
+        t.penup()
         # محاسبه و نمایش جمع دو عدد
         x = num1 + num2
         o = open("./outputimages/outputdata.txt" , "w")
@@ -213,7 +217,7 @@ def main(action ,num1  , num2):
 
         # Save the image without background
         img.save("./outputimages/drawing_no_background.png", "PNG")
-
+        
         sys.exit(0)
 
 main(action ,num1 , num2)

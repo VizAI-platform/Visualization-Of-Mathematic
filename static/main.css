@@ -31,6 +31,22 @@ body{
 }
 
 
+
+.vectors{
+    color: #9981c1;
+}
+
+.vectors:hover{
+    background: rgb(224,176,207) !important;
+    background: radial-gradient(circle, rgba(224,176,207,0) 0%, #9981c1 100%) !important;
+}
+
+
+.vectors h1{
+    color: #9981c1 !important;
+}
+
+
 .formim{
     width: 100%;
     display: flex;
